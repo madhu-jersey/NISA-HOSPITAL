@@ -379,7 +379,7 @@ function HospitalHome() {
           <div style={{ position: 'absolute', top: '40%', left: '40%', width: '400px', height: '400px', borderRadius: '50%', background: 'radial-gradient(circle, rgba(200,16,46,0.04) 0%, transparent 65%)' }}></div>
         </div>
 
-        {/* Dotted grid â€” top right */}
+        {/* Dotted grid - top right */}
         <div className="absolute top-6 hidden lg:block pointer-events-none" style={{ right: '5%', zIndex: 0, opacity: 0.18 }}>
           <svg width="140" height="120" viewBox="0 0 140 120">
             {[0,1,2,3,4,5,6].map(row => [0,1,2,3,4,5,6,7].map(col => (
@@ -387,7 +387,7 @@ function HospitalHome() {
             )))}
           </svg>
         </div>
-        {/* Dotted grid â€” bottom left */}
+        {/* Dotted grid - bottom left */}
         <div className="absolute bottom-10 left-4 hidden lg:block pointer-events-none" style={{ zIndex: 0, opacity: 0.12 }}>
           <svg width="80" height="80" viewBox="0 0 80 80">
             {[0,1,2,3,4].map(row => [0,1,2,3,4].map(col => (
@@ -443,7 +443,7 @@ function HospitalHome() {
               <p style={{ fontSize: '17px', color: '#6B5258', lineHeight: 1.7, maxWidth: '400px', marginBottom: '28px', fontFamily: te ? "'Noto Sans Telugu', sans-serif" : 'inherit' }}>
                 {te
                   ? 'తణుకులో కళ్ళు, మహిళలు మరియు పిల్లల కోసం ఆప్యాయతతో కూడిన వైద్య సేవలు.'
-                  : 'Compassionate specialist healthcare for eyes, women and children â€” right here in Tanuku.'}
+                  : 'Compassionate specialist healthcare for eyes, women and children - right here in Tanuku.'}
               </p>
 
               {/* Trust stat card */}
@@ -588,10 +588,10 @@ function HospitalHome() {
                   <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, height: '120px', background: 'linear-gradient(to top, rgba(50,8,15,0.15) 0%, transparent 100%)', borderRadius: '0 0 30px 30px', pointerEvents: 'none' }}></div>
                 </div>
 
-                {/* Red accent bar â€” left edge */}
+                {/* Red accent bar - left edge */}
                 <div className="absolute hidden lg:block pointer-events-none" style={{ top: '20%', left: '-5px', width: '5px', height: '38%', background: 'linear-gradient(180deg, #C8102E, #E0A0AB)', borderRadius: '4px', zIndex: 2, opacity: 0.65 }}></div>
 
-                {/* Floating Card: Compassion â€” top-left */}
+                {/* Floating Card: Compassion - top-left */}
                 <div
                   className="absolute animate-float hidden lg:flex"
                   style={{ top: '8%', left: '-9%', zIndex: 10, animationDelay: '0s', animationDuration: '4.5s', width: '172px' }}
@@ -610,7 +610,7 @@ function HospitalHome() {
                   </svg>
                 </div>
 
-                {/* Floating Badge: Heart â€” top-right */}
+                {/* Floating Badge: Heart - top-right */}
                 <div
                   className="absolute animate-float hidden lg:flex items-center justify-center"
                   style={{ top: '-7%', right: '10%', zIndex: 10, animationDelay: '1s', animationDuration: '5s', width: '64px', height: '64px' }}
@@ -622,7 +622,7 @@ function HospitalHome() {
                   </div>
                 </div>
 
-                {/* Floating Card: Healthier Tomorrow â€” right edge */}
+                {/* Floating Card: Healthier Tomorrow - right edge */}
                 <div
                   className="absolute animate-float hidden lg:flex"
                   style={{ bottom: '14%', right: '-12%', zIndex: 10, animationDelay: '0.7s', animationDuration: '5.5s', width: '118px' }}
