@@ -75,7 +75,7 @@ export const doctors = [
     name: 'Dr. Ayesha Khan Pathan',
     initials: 'AK',
     specialty: 'Consultant Obstetrician & Gynaecologist',
-    qualification: 'M.B.B.S., M.S. (OBGYN), DMAS, FMAS',
+    qualification: 'M.B.B.S., M.S. (OBGYN), DMAS, FMAS , MBA in Healthcare Management (ICB, Hyderabad)',
     regNo: '58346',
     description: 'Compassionate care for women and families through every stage of life.',
     services: [
@@ -149,7 +149,7 @@ export const whyChooseUs = [
     description: 'Thoughtful consultations with your comfort and wellbeing at the centre.',
   },
   {
-    title: '16 Years of Trusted Healthcare',
+    title: 'Well-Trained & Compassionate Staff',
     description: 'Serving families in Tanuku with care they have trusted for 16 years.',
   },
 ];

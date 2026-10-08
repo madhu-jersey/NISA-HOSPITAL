@@ -1076,7 +1076,7 @@ function HospitalHome() {
             <SectionHeading kicker="Who We Are" title="About Nisa Hospital" />
             <p>{hospital.aboutDescription}</p>
             <div className="about-cards stagger">
-              {['Specialist Eye Care', 'Women & Child Health', 'Patient-Centered Approach', '16 Years of Trusted Healthcare'].map(f => (
+              {['Specialist Eye Care', 'Women & Child Health', 'Patient-Centered Approach', 'Well-Trained & Compassionate Staff'].map(f => (
                 <div className="about-card" key={f}>
                   <Check size={16} aria-hidden="true" />
                   <span>{f}</span>
