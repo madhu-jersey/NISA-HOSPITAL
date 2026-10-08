@@ -422,7 +422,7 @@ function HospitalHome() {
                 }}
               >
                 <span style={{ width: 7, height: 7, borderRadius: '50%', background: '#C8102E', display: 'inline-block', flexShrink: 0, boxShadow: '0 0 0 3px rgba(200,16,46,0.15)' }} aria-hidden="true"></span>
-                <span style={{ fontSize: '11px', fontWeight: 700, color: '#C8102E', letterSpacing: '0.1em', textTransform: 'uppercase' }}>NISA HOSPITAL Â· TANUKU</span>
+                <span style={{ fontSize: '11px', fontWeight: 700, color: '#C8102E', letterSpacing: '0.1em', textTransform: 'uppercase' }}>NISA HOSPITAL  TANUKU</span>
               </div>
 
               {/* Main heading */}
