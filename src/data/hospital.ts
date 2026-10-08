@@ -13,7 +13,7 @@ export const hospital = {
     'Nisa Hospital in Tanuku brings together specialised care for eyes, women and children in a patient-focused healthcare environment. With 16 years of trusted healthcare, our dedicated specialists provide compassionate care for your family.',
 
   // ── Hospital contact numbers ──
-  phone: '08819-225123',
+  phone: '09885225123',
   phoneMobile: '+91 92467 44123',
 
   address: 'Tanuku, Andhra Pradesh',
@@ -243,7 +243,7 @@ export const faqs = [
   },
   {
     question: 'How can I contact the hospital?',
-    answer: 'Call 08819-225123 or +91 92467 44123, or use the Call Hospital button on this page.',
+    answer: 'Call 09885225123 or +91 92467 44123, or use the Call Hospital button on this page.',
   },
   {
     question: 'Where is Nisa Hospital located?',
