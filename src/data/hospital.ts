@@ -13,7 +13,8 @@ export const hospital = {
     'Nisa Hospital in Tanuku brings together specialised care for eyes, women and children in a patient-focused healthcare environment. With 16 years of trusted healthcare, our dedicated specialists provide compassionate care for your family.',
 
   // ── Hospital contact numbers ──
-  phone: '09885225123',
+  phone: '08819-225123',
+  phoneEyeCare: '09885 225123',
   phoneMobile: '+91 92467 44123',
 
   address: 'Tanuku, Andhra Pradesh',
@@ -21,6 +22,7 @@ export const hospital = {
   // Verified listing: "Nisa Hospital | Eye Care, Woman & Child Care." (Tanuku)
   googleMapsUrl: 'https://maps.app.goo.gl/QQS9v6KY2WY4EnKv8',
   googleReviewsUrl: 'https://maps.app.goo.gl/QQS9v6KY2WY4EnKv8',
+  instagramUrl: 'https://www.instagram.com/nisa_hospital_tanuku/',
   // Coordinates taken from the verified listing above.
   directionsUrl: 'https://www.google.com/maps/dir/?api=1&destination=16.756136,81.6827284',
   googleMapsEmbedUrl: 'https://www.google.com/maps?q=16.756136,81.6827284&z=17&hl=en&output=embed',
@@ -35,12 +37,41 @@ export const serviceCategories = [
   {
     name: 'Eye Care / Ophthalmology',
     icon: 'eye',
-    items: [
+    rawSourceItems: [
       'Ophthalmology Consultations',
       'Cataract Operations',
+      'Cataract Surgeries',
       'Phaco Surgery',
+      'Phaco System Operation Without Sutures',
+      'Glaucoma Surgeries',
+      'Pterygium Excision Surgeries',
       'Refractive Surgery',
+      'LASIK',
+      'PRK',
+      'ICL',
+      'IOL Power Calculation',
+      'Multifocal Lenses',
+      'Alcon Lenses Available',
+      'Iocare Lenses Available',
+      'Johnson & Johnson Lenses Available',
+      'Eye Surgeries',
+      'All Eye Problem Treatments',
       'Cornea-related Care',
+      'Cornea & Anterior Segment Care',
+    ],
+    items: [
+      'Ophthalmology Consultations',
+      'Cataract Surgery',
+      'Phaco Surgery (Phaco System Operation Without Sutures)',
+      'Glaucoma Surgery',
+      'Pterygium Excision Surgery',
+      'Refractive Surgery — LASIK & PRK',
+      'ICL',
+      'IOL Power Calculation',
+      'Multifocal Lenses',
+      'Alcon Lenses Available',
+      'Iocare Lenses Available',
+      'Johnson & Johnson Lenses Available',
       'Cornea & Anterior Segment Care',
     ],
   },
@@ -49,8 +80,12 @@ export const serviceCategories = [
     icon: 'heart',
     items: [
       'Obstetrical & Gynaecology Services',
+      'Normal Delivery',
+      'Caesarean Section',
+      'Hysterectomy Operation',
       'Ultrasound Scan',
       'Infertility Treatment',
+      'Infertility Treatments',
       'Electronic Foetal Monitoring',
       'Surgical Treatments by Laparoscopy',
       'Obstetric & Gynaecological Surgical Treatments',
@@ -59,10 +94,10 @@ export const serviceCategories = [
   {
     name: 'Paediatrics / Child Care',
     icon: 'baby',
-    items: ['Paediatric Care', 'NICU', 'Centralized Oxygen Unit'],
+    items: ['Paediatric Care', 'NICU', 'Centralized Oxygen Unit', 'Double & Triple Surface'],
   },
   {
-    name: 'Insurance',
+    name: 'Insurance & Cashless Support',
     icon: 'shield',
     items: ['Medical Insurance Facilities', 'Cashless Insurance Facilities'],
   },
@@ -243,7 +278,7 @@ export const faqs = [
   },
   {
     question: 'How can I contact the hospital?',
-    answer: 'Call 09885225123 or +91 92467 44123, or use the Call Hospital button on this page.',
+    answer: 'Call 08819-225123 (Main) or +91 92467 44123, or use the Call Hospital button on this page. For Eye Care enquiries, call 09885 225123.',
   },
   {
     question: 'Where is Nisa Hospital located?',
@@ -252,6 +287,41 @@ export const faqs = [
   },
 ];
 
+
+
+// ── Empanelled Insurance Partners ──
+export const insurancePartners = {
+  companies: [
+    'Star Health',
+    'HDFC ERGO',
+    'Tata AIG',
+    'ICICI Lombard',
+    'SBI General Insurance',
+    'Royal Sundaram',
+    'ManipalCigna',
+    'ACKO',
+    'Aditya Birla Health',
+    'Future Generali',
+    'IFFCO-Tokio',
+    'Kotak General Insurance',
+    'Liberty General Insurance',
+    'Magma HDI',
+    'Edelweiss General Insurance',
+    'UnitedHealthcare',
+  ],
+  tpas: [
+    'Medi Assist',
+    'FHPL',
+    'Paramount Health',
+    'Heritage Health',
+    'MD India',
+    'Safeway',
+    'Ericson Insurance TPA',
+    'Raksha',
+    'Vision TPA',
+  ],
+  disclaimer: 'Cashless facilities are subject to policy terms, eligibility and approval.',
+};
 
 // ── Gallery Images ──
 export const galleryImages = [

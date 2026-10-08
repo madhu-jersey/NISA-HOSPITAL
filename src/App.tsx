@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import {
   doctors, faqs, googleRating, googleReviews, hospital,
-  patientJourney, serviceCategories, trustCards, whyChooseUs, galleryImages,
+  patientJourney, serviceCategories, trustCards, whyChooseUs, galleryImages, insurancePartners,
 } from './data/hospital';
 import {
   Route,
@@ -25,7 +25,8 @@ import {
 } from 'wouter';
 
 // Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ Constants Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬
-const callUrl = `tel:09885225123`;
+const callUrl = 'tel:08819225123';
+const eyeCareCallUrl = 'tel:+919885225123';
 const callMobileUrl = `tel:+919246744123`;
 const directionUrl = hospital.directionsUrl;
 const queryClient = new QueryClient();
@@ -302,9 +303,14 @@ function HospitalHome() {
               <a key={href} href={href}>{label}</a>
             ))}
           </nav>
-          <a href={callUrl} className="nav-cta" aria-label={`Call Nisa Hospital ${hospital.phone}`}>
-            <Phone size={15} aria-hidden="true" /> {te ? 'కాల్ చేయండి' : 'Call Hospital'}
-          </a>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <a href={hospital.instagramUrl} target="_blank" rel="noopener noreferrer" aria-label="Follow Nisa Hospital on Instagram" style={{ color: '#2E1F24', display: 'flex', alignItems: 'center' }} className="hover:opacity-70 transition-opacity">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+            </a>
+            <a href={callUrl} className="nav-cta" aria-label={`Call Nisa Hospital ${hospital.phone}`}>
+              <Phone size={15} aria-hidden="true" /> Call Hospital
+            </a>
+          </div>
           <button
             className="menu-toggle"
             aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
@@ -749,6 +755,44 @@ function HospitalHome() {
                       </li>
                     ))}
                   </ul>
+                  {/* Eye Care dedicated phone CTA */}
+                  {isEyeCare && (
+                    <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: '1px solid #F0D5D9' }}>
+                      <a
+                        href="tel:+919885225123"
+                        style={{
+                          display: 'inline-flex', alignItems: 'center', gap: '8px',
+                          fontSize: '14px', fontWeight: 700, color: '#C8102E',
+                          textDecoration: 'none',
+                        }}
+                      >
+                        <Phone size={14} aria-hidden="true" />
+                        Call Eye Care: 09885 225123
+                      </a>
+                    </div>
+                  )}
+
+                  {/* Insurance: Empanelled partners block */}
+                  {cat.icon === 'shield' && (
+                    <div style={{ marginTop: '24px', paddingTop: '20px', borderTop: '1px solid #F0D5D9' }}>
+                      <p style={{ fontSize: '11px', fontWeight: 700, color: '#8A6C70', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '12px' }}>
+                        Selected Empanelled Partners
+                      </p>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 8px', marginBottom: '14px' }}>
+                        {insurancePartners.companies.slice(0, 10).map(name => (
+                          <span key={name} style={{ fontSize: '12px', fontWeight: 600, color: '#4A3B3F', background: '#F9F5F6', border: '1px solid #EEE4E6', borderRadius: '6px', padding: '3px 9px' }}>
+                            {name}
+                          </span>
+                        ))}
+                      </div>
+                      <p style={{ fontSize: '11px', color: '#9A8488', lineHeight: 1.6, margin: 0 }}>
+                        Also associated with TPAs including Medi Assist, FHPL, Paramount Health, MD India &amp; others.
+                        <br />
+                        <em>{insurancePartners.disclaimer}</em>
+                      </p>
+                    </div>
+                  )}
+
 
                 </article>
               );
@@ -758,7 +802,56 @@ function HospitalHome() {
         </div>
       </section>
 
-      {/* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ ABOUT Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */}
+      
+
+<section id="about" className="about-section section-pad" aria-labelledby="about-heading">
+        <div className="wrap about-grid">
+          <div className="about-visual reveal-left">
+            {hospital.aboutImage ? (
+              <img
+                src={hospital.aboutImage}
+                alt="Nisa Hospital building in Tanuku"
+                loading="lazy"
+                width={480}
+                height={540}
+              />
+            ) : (
+              <div className="brand-panel brand-panel-about">
+                <img
+                  src="/nisa-logo.jpg"
+                  alt="Nisa Hospital Ã¢â‚¬â€ Eye Care, Women & Child Care"
+                  loading="lazy"
+                  width={280}
+                  height={280}
+                />
+                <div className="about-years">
+                  <span>{hospital.yearsOfTrust}</span>
+                  <strong>Years of Trusted Healthcare</strong>
+                </div>
+              </div>
+            )}
+          </div>
+          <div className="about-copy reveal-right">
+            <SectionHeading kicker="Who We Are" title="About Nisa Hospital" />
+            <p>{hospital.aboutDescription}</p>
+            <div className="about-cards stagger">
+              {['Specialist Eye Care', 'Women & Child Health', 'Patient-Centered Approach', 'Well-Trained & Compassionate Staff'].map(f => (
+                <div className="about-card" key={f}>
+                  <Check size={16} aria-hidden="true" />
+                  <span>{f}</span>
+                </div>
+              ))}
+            </div>
+            <a href="#team" className="button button-primary">
+              Meet Our Doctors <ArrowRight size={16} aria-hidden="true" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      
+
+{/* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ ABOUT Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */}
 
 
       {/* ─── DOCTORS DIRECTORY ─────────────────────────────────────── */}
@@ -1044,53 +1137,9 @@ function HospitalHome() {
         </div>
       </section>
 
-      {/* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ GOOGLE REVIEWS Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */}
-      <section id="about" className="about-section section-pad" aria-labelledby="about-heading">
-        <div className="wrap about-grid">
-          <div className="about-visual reveal-left">
-            {hospital.aboutImage ? (
-              <img
-                src={hospital.aboutImage}
-                alt="Nisa Hospital building in Tanuku"
-                loading="lazy"
-                width={480}
-                height={540}
-              />
-            ) : (
-              <div className="brand-panel brand-panel-about">
-                <img
-                  src="/nisa-logo.jpg"
-                  alt="Nisa Hospital Ã¢â‚¬â€ Eye Care, Women & Child Care"
-                  loading="lazy"
-                  width={280}
-                  height={280}
-                />
-                <div className="about-years">
-                  <span>{hospital.yearsOfTrust}</span>
-                  <strong>Years of Trusted Healthcare</strong>
-                </div>
-              </div>
-            )}
-          </div>
-          <div className="about-copy reveal-right">
-            <SectionHeading kicker="Who We Are" title="About Nisa Hospital" />
-            <p>{hospital.aboutDescription}</p>
-            <div className="about-cards stagger">
-              {['Specialist Eye Care', 'Women & Child Health', 'Patient-Centered Approach', 'Well-Trained & Compassionate Staff'].map(f => (
-                <div className="about-card" key={f}>
-                  <Check size={16} aria-hidden="true" />
-                  <span>{f}</span>
-                </div>
-              ))}
-            </div>
-            <a href="#team" className="button button-primary">
-              Meet Our Doctors <ArrowRight size={16} aria-hidden="true" />
-            </a>
-          </div>
-        </div>
-      </section>
+      
 
-      {/* ═══════ GALLERY ═══════ */}
+{/* ═══════ GALLERY ═══════ */}
       <section id="gallery" className="gallery-section section-pad" aria-labelledby="gallery-heading">
         <div className="gallery-glow" aria-hidden="true" />
         <div className="wrap gallery-wrap">
@@ -1139,6 +1188,7 @@ function HospitalHome() {
       </section>
 
 
+      {/* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ GOOGLE REVIEWS Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */}
       {/* Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ EYE CARE Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬Ã¢â€â‚¬ */}
       <section id="eye-care" className="eye-care-section section-pad" aria-labelledby="eye-care-heading">
         <div className="wrap feature-layout">
@@ -1162,14 +1212,14 @@ function HospitalHome() {
                 </li>
               ))}
             </ul>
-            <a href={callUrl} className="button button-primary">
-              <Phone size={16} aria-hidden="true" /> Call Hospital
+            <a href={eyeCareCallUrl} className="button button-primary">
+              <Phone size={16} aria-hidden="true" /> Call Eye Care
             </a>
           </div>
           <div className="feature-photo reveal-right">
             <img
-              src="/nisa-eyecare.jpg"
-              alt="Eye examination with a slit lamp"
+              src="/eye-exam-new-hq.png"
+              alt="Doctor performing an eye examination with a slit lamp"
               loading="lazy"
               width={560}
               height={420}
@@ -1183,8 +1233,8 @@ function HospitalHome() {
         <div className="wrap feature-layout">
           <div className="feature-photo reveal-left">
             <img
-              src="/nisa-women-child.jpg"
-              alt="Doctor caring for a mother and young child"
+              src="/women-child-care.jpg"
+              alt="Doctor examining a pregnant woman in a bright, welcoming consultation room"
               loading="lazy"
               width={560}
               height={420}

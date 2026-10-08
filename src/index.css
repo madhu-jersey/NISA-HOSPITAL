@@ -2048,3 +2048,30 @@ html, body { overflow-x: clip; }
     transform: none !important;
   }
 }
+
+/* ------- FOOTER SOCIAL ------- */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-social {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.footer-social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.footer-social-link:hover {
+  color: #fff;
+}
