@@ -1154,7 +1154,7 @@ function HospitalHome() {
             </div>
             <div className="gallery-head-meta">
               <span className="gallery-count">{String(galleryImages.length).padStart(2, '0')}</span>
-              <span className="gallery-count-label">Photographs<br />of the hospital</span>
+              <span className="gallery-count-label">Photographs<br />of the Hospital</span>
             </div>
           </div>
 

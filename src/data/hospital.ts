@@ -372,5 +372,10 @@ export const galleryImages = [
     url: '/gallery/gallery-10.jpg', // Auto refractometer
     alt: 'Auto Refractometer',
     caption: 'Eye Testing'
+  },
+  {
+    url: '/gallery/gallery-11.png',
+    alt: 'Operation Theater',
+    caption: 'Operation Theater'
   }
 ];
