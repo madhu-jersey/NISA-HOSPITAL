@@ -65,7 +65,6 @@ export const serviceCategories = [
       'Phaco Surgery (Phaco System Operation Without Sutures)',
       'Glaucoma Surgery',
       'Pterygium Excision Surgery',
-      'Refractive Surgery — LASIK & PRK',
       'ICL',
       'IOL Power Calculation',
       'Multifocal Lenses',
@@ -93,7 +92,7 @@ export const serviceCategories = [
   {
     name: 'Paediatrics / Child Care',
     icon: 'baby',
-    items: ['Paediatric Care', 'NICU', 'Centralized Oxygen Unit', 'Double & Triple Surface'],
+    items: ['Paediatric Care', 'NICU', 'Centralized Oxygen Unit', 'Double - Surface Phototherapy' , 'Triple - SurfacePhototherapy'],
   },
   {
     name: 'Insurance & Cashless Support',
@@ -109,7 +108,7 @@ export const doctors = [
     name: 'Dr. Ayesha Khan Pathan',
     initials: 'AK',
     specialty: 'Consultant Obstetrician & Gynaecologist',
-    qualification: 'M.B.B.S., M.S. (OBGYN), DMAS, FMAS , MBA in Healthcare Management (ICB, Hyderabad)',
+    qualification: 'M.B.B.S., M.S. (OBGYN), DMAS, FMAS , MBA in Healthcare Management (ISB, Hyderabad)',
     regNo: '58346',
     description: 'Compassionate care for women and families through every stage of life.',
     services: [
