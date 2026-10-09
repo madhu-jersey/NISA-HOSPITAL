@@ -1233,7 +1233,7 @@ function HospitalHome() {
         <div className="wrap feature-layout">
           <div className="feature-photo reveal-left">
             <img
-              src="/nisa-women-child.jpg"
+              src="/women-child-care.jpg"
               alt="Doctor examining a pregnant woman in a bright, welcoming consultation room"
               loading="lazy"
               width={560}
