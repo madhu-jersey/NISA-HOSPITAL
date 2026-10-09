@@ -36,6 +36,7 @@ const navItems: Array<[string, string]> = [
   ['Home', '#home'],
   ['About', '#about'],
   ['Services', '#services'],
+  ['Gallery', '#gallery'],
   ['Doctors', '#team'],
   ['Reviews', '#reviews'],
   ['Contact', '#contact'],
