@@ -1492,7 +1492,7 @@ function HospitalHome() {
           </div>
         </div>
         <div className="wrap footer-bottom">
-          <span>&copy; 2026 Nisa Hospital, Tanuku</span>
+          <span>Copyright @ 2026 Nisahospital.com. All rights reserved.</span>
         </div>
       </footer>
 
