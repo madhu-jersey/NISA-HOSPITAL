@@ -92,7 +92,7 @@ export const serviceCategories = [
   {
     name: 'Paediatrics / Child Care',
     icon: 'baby',
-    items: ['Paediatric Care', 'NICU', 'Centralized Oxygen Unit', 'Double - Surface Phototherapy' , 'Triple - SurfacePhototherapy'],
+    items: ['Paediatric Care', 'NICU', 'Centralized Oxygen Unit', 'Double - Surface Phototherapy' , 'Triple - Surface Phototherapy'],
   },
   {
     name: 'Insurance & Cashless Support',
