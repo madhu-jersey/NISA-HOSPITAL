@@ -17,7 +17,7 @@ export const hospital = {
   phoneEyeCare: '09885 225123',
   phoneMobile: '+91 92467 44123',
 
-  address: 'Tanuku, Andhra Pradesh',
+  address: '21-4-29, Old Police Station Street, Venkatarayapuram, Tanuku, West Godavari, Andhra Pradesh 534211, India',
   hours: 'Open 24/7 (Including Sundays)',
   // Verified listing: "Nisa Hospital | Eye Care, Woman & Child Care." (Tanuku)
   googleMapsUrl: 'https://maps.app.goo.gl/QQS9v6KY2WY4EnKv8',
