@@ -85,7 +85,6 @@ export const serviceCategories = [
       'Hysterectomy Operation',
       'Ultrasound Scan',
       'Infertility Treatment',
-      'Infertility Treatments',
       'Electronic Foetal Monitoring',
       'Surgical Treatments by Laparoscopy',
       'Obstetric & Gynaecological Surgical Treatments',
