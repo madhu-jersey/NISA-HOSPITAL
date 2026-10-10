@@ -1134,7 +1134,7 @@ function HospitalHome() {
                             rel="noopener noreferrer"
                             aria-label="Follow Dr. Ayesha Khan Pathan on Instagram"
                             style={{
-                              display: 'inline-flex', alignItems: 'center', gap: '8px',
+                              display: 'flex', alignItems: 'center', gap: '8px',
                               fontSize: '13px', fontWeight: 800,
                               color: '#C8102E', textDecoration: 'none',
                               letterSpacing: '0.08em', textTransform: 'uppercase',
