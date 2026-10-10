@@ -1127,6 +1127,24 @@ function HospitalHome() {
                             <ArrowRight size={14} strokeWidth={2.5} />
                           </span>
                         </a>
+                        {doc.name === 'Dr. Ayesha Khan Pathan' && (
+                          <a
+                            href="https://www.instagram.com/ayesha.khan.71653/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Follow Dr. Ayesha Khan Pathan on Instagram"
+                            style={{
+                              display: 'inline-flex', alignItems: 'center', gap: '8px',
+                              fontSize: '13px', fontWeight: 800,
+                              color: '#C8102E', textDecoration: 'none',
+                              letterSpacing: '0.08em', textTransform: 'uppercase',
+                              transition: 'gap 0.2s ease',
+                            }}
+                            className="group/cta"
+                          >
+                            Instagram
+                          </a>
+                        )}
                       </div>
                     </div>
                   </article>
