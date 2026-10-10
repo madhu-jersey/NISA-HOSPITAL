@@ -1026,6 +1026,24 @@ function HospitalHome() {
                         margin: '0 0 16px 0',
                       }}>
                         {doc.name}
+                        {doc.name === 'Dr. Ayesha Khan Pathan' && (
+                          <a
+                            href="https://www.instagram.com/ayesha.khan.71653/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Follow Dr. Ayesha Khan Pathan on Instagram"
+                            style={{
+                              display: 'inline-flex', verticalAlign: 'middle',
+                              marginLeft: '10px', color: '#C8102E', lineHeight: 0,
+                            }}
+                          >
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                            </svg>
+                          </a>
+                        )}
                       </h3>
 
                       {/* Thin accent line under name */}
@@ -1127,28 +1145,6 @@ function HospitalHome() {
                             <ArrowRight size={14} strokeWidth={2.5} />
                           </span>
                         </a>
-                        {doc.name === 'Dr. Ayesha Khan Pathan' && (
-                          <a
-                            href="https://www.instagram.com/ayesha.khan.71653/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            aria-label="Follow Dr. Ayesha Khan Pathan on Instagram"
-                            style={{
-                              display: 'flex', alignItems: 'center', gap: '8px',
-                              fontSize: '13px', fontWeight: 800,
-                              color: '#C8102E', textDecoration: 'none',
-                              letterSpacing: '0.08em', textTransform: 'uppercase',
-                              transition: 'gap 0.2s ease',
-                            }}
-                            className="group/cta"
-                          >
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                              <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                              <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                            </svg>
-                          </a>
-                        )}
                       </div>
                     </div>
                   </article>
